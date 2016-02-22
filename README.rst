@@ -17,7 +17,8 @@ Description
 
 *Issue inspector for your GitHub repositories*
 
-.. image:: https://img-fotki.yandex.ru/get/27579/153990.b/0_83260_bf5ee282_L.png
+.. image:: https://img-fotki.yandex.ru/get/27579/153990.b/0_83260_bf5ee282_XL.png
+
 
 This application allows you to inspect issues in your repositories that require your attention.
 
