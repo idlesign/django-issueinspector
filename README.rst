@@ -31,7 +31,7 @@ Requirements
 ------------
 
 * Python 3.2+
-* Django
+* Django 1.4+
 
 
 How to setup
