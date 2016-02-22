@@ -1,0 +1,53 @@
+<div class="col-md-3">
+    <ul class="nav nav-pills nav-stacked" role="tablist">
+
+        {% for repo in repos  %}
+            <li role="presentation">
+                <a href="#{{ repo.id }}" role="tab" data-toggle="tab">
+                    {{ repo.name }} <span class="badge pull-right">{{ repo.issues|length }}</span></a>
+            </li>
+        {% endfor %}
+
+    </ul>
+</div>
+
+<div class="col-md-9">
+    <div class="tab-content">
+
+        {% for repo in repos  %}
+            <div role="tabpanel" class="tab-pane" id="{{ repo.id }}">
+                <div class="row">
+
+                    {% for issue in repo.issues %}
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a href="{{ issue.url }}" target="_blank">
+                                    Issue {{ issue.number }}:</a> {{ issue.title }}
+                                <strong class="pull-right">{{ issue.date|date }}</strong>
+                            </div>
+                            <div class="panel-body">
+                                <div class="alert alert-{{ issue.status }}" role="alert">{{ issue.hint }}</div>
+
+                                <div class="pull-right">
+                                    {% for tag in issue.tags %}
+                                        <span class="label label-default" style="background-color:#{{ tag.color }}">
+                                            {{ tag.name }}</span>
+                                    {% endfor %}
+                                </div>
+
+                                {% if issue.comment %}
+                                    <blockquote><small>
+                                        {{ issue.comment }}
+                                    </small></blockquote>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+</div>
