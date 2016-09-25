@@ -1,3 +1,5 @@
+{% load static %}
+{% get_static_prefix as STATIC_URL %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,6 +92,11 @@
     <script type="text/javascript">
         /*global xross */
         $(function(){
+
+            if ($('#username').value() && $('#token').value()) {
+                $('#auth-from').submit();
+            }
+
             var progress = $('#progress-bar');
 
             progress.hide();
