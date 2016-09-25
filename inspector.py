@@ -13,6 +13,7 @@ ROOT_URLCONF = RUNNER_NAME
 
 
 INSTALLED_APPS = [
+    'django.contrib.staticfiles',
     'issueinspector',
     'xross',
 ]
@@ -32,6 +33,8 @@ TEMPLATES = [
 ]
 
 
+STATIC_URL = '/static/'
+
 urlpatterns = [
     url(r'^$', inspector_main, name='index'),
 ]
@@ -39,7 +42,6 @@ urlpatterns = [
 
 if __name__ == '__main__':
     import webbrowser
-    from time import sleep
 
     from django.core.management import call_command
     from django.core.wsgi import get_wsgi_application
