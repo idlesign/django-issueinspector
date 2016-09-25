@@ -40,8 +40,8 @@ How to run standalone
 1. Check you're on Unix-based system;
 2. Check Python 3.2+ is installed;
 3. Check `django-xross` is installed;
-4. Using a terminal switch into `issueinspector` directory with `runserver.py` file;
-5. Issue command: `./inspect.py`;
+4. Using a terminal switch into `issueinspector` directory with `inspector.py` file;
+5. Issue command: `./inspector.py`;
 6. If browser is not started automatically go to: http://127.0.0.1:8000/
 
 You can store `username` and token in `.inspector.conf` configuration file near `inspect.py`
