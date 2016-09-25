@@ -93,15 +93,12 @@
         /*global xross */
         $(function(){
 
-            if ($('#username').value() && $('#token').value()) {
-                $('#auth-from').submit();
-            }
-
-            var progress = $('#progress-bar');
+            var progress = $('#progress-bar'),
+                $btnInspect = $('#inspect');
 
             progress.hide();
 
-            $('#inspect').on('xrossajaxbefore', function() {
+            $btnInspect.on('xrossajaxbefore', function() {
                 progress.show();
 
             }).on('xrossajaxafter', function() {
@@ -109,6 +106,10 @@
             });
 
             xross.automate();
+
+            if ($('#username').val() && $('#token').val()) {
+                setTimeout(function(){$btnInspect.click()}, 1000);
+            }
         });
 
     </script>
