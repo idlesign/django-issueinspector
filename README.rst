@@ -34,8 +34,19 @@ Requirements
 * Django 1.4+
 
 
-How to setup
-------------
+How to run standalone
+---------------------
+
+1. Check you're on Unix-based system;
+2. Check Python 3.2+ is installed;
+3. Check `django-xross` is installed;
+4. Using a terminal switch into `issueinspector` directory with `runserver.py` file;
+5. Issue command: `./inspect.py`;
+6. If browser is not started automatically go to: http://127.0.0.1:8000/
+
+
+How to run as Django app
+------------------------
 
 Given your already have your Django project configured do the following simple steps:
 

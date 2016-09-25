@@ -1,5 +1,11 @@
 django-issueinspector changelog
-================================================
+===============================
+
+
+Unreleased
+----------
++ Added ability to start as a standalone.
+
 
 v0.1.0
 ------
