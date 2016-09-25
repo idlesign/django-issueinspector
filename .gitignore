@@ -2,6 +2,7 @@
 .pydevproject
 .idea
 .tox
+.inspector.conf
 __pycache__
 *.pyc
 *.pyo

@@ -1,6 +1,7 @@
 syntax:glob
 
 .project
+.inspector.conf
 .pydevproject
 .idea
 .tox

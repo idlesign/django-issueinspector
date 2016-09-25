@@ -19,10 +19,10 @@
                         <form class="form-inline navbar-form" id="auth-from">
                             {% csrf_token %}
                             <div class="form-group">
-                                <input type="text" name="username" class="form-control" id="username" placeholder="GitHub Username" required>
+                                <input type="text" name="username" class="form-control" id="username" placeholder="GitHub Username" value="{{ username }}" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="token" class="form-control" id="token" placeholder="Access Token" required>
+                                <input type="text" name="token" class="form-control" id="token" placeholder="Access Token" value="{{ token }}" required>
                             </div>
                             <button id="inspect" type="submit" data-xform="auth-from" data-xtarget="box-issues" data-xmethod="post" class="btn btn-default xross">
                                 Inspect

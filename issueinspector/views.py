@@ -1,7 +1,13 @@
+import os
+from configparser import ConfigParser
+
 from django.shortcuts import render
 from xross.toolbox import xross_view, xross_listener
 
 from .utils import fetch_data
+
+
+CONFIG_NAME = '.inspector.conf'
 
 
 def inspect(request):
@@ -19,5 +25,17 @@ def inspector_main(request):
 
     :param request:
     """
+    username = ''
+    token = ''
+
+    if os.path.exists(CONFIG_NAME):
+        conf = ConfigParser()
+        conf.read(CONFIG_NAME)
+        username = conf['core']['username']
+        token = conf['core']['token']
+
     xross_listener(http_method='POST')
-    return render(request, 'issueinspector/index.html')
+    return render(request, 'issueinspector/index.html', {
+        'username': username,
+        'token': token,
+    })

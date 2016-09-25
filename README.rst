@@ -44,6 +44,14 @@ How to run standalone
 5. Issue command: `./inspect.py`;
 6. If browser is not started automatically go to: http://127.0.0.1:8000/
 
+You can store `username` and token in `.inspector.conf` configuration file near `inspect.py`
+using the following format::
+
+    [core]
+    username = idlesign
+    token = 123123123123123
+
+
 
 How to run as Django app
 ------------------------

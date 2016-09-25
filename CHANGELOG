@@ -5,6 +5,7 @@ django-issueinspector changelog
 Unreleased
 ----------
 + Added ability to start as a standalone.
++ Added config file support to store username and token.
 
 
 v0.1.0
